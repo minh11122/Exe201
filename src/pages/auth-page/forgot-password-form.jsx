@@ -4,6 +4,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import toast from "react-hot-toast";
 import { forgotPassword } from "@/services/auth.service";
+import z7061145888588_5c8d81483fa297d0582373ac66f727a4 from "../../assets/z7061145888588_5c8d81483fa297d0582373ac66f727a4.jpg";
 
 export function ForgotPasswordForm() {
   const formik = useFormik({
@@ -31,15 +32,17 @@ export function ForgotPasswordForm() {
   });
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-orange-50 px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-yellow-50 px-4">
       {/* Logo + Brand OUTSIDE card */}
-      <Link to="/" className="flex flex-col items-center mb-6">
-        <div className="w-16 h-16 rounded-full bg-orange-500 flex items-center justify-center text-white text-2xl font-bold">
-          Y
-        </div>
-        <div className="mt-2 text-2xl font-bold text-gray-900">
-          MyMap<span className="text-orange-500">Food</span>
-        </div>
+      <Link to="/" className="flex items-center gap-2">
+        <img
+          src={z7061145888588_5c8d81483fa297d0582373ac66f727a4}
+          alt="MyMapFood Logo"
+          className="w-10 h-10 object-cover rounded-full"
+        />
+        <span className="text-2xl font-bold text-gray-900 transition-colors">
+          My<span className="text-yellow-500">MapFood</span>
+        </span>
       </Link>
 
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
@@ -52,8 +55,8 @@ export function ForgotPasswordForm() {
         </p>
 
         {/* Icon */}
-        <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center mx-auto mb-6">
-          <Mail className="w-8 h-8 text-orange-500" />
+        <div className="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center mx-auto mb-6">
+          <Mail className="w-8 h-8 text-yellow-500" />
         </div>
 
         <form onSubmit={formik.handleSubmit} className="space-y-4">
@@ -68,7 +71,7 @@ export function ForgotPasswordForm() {
                 name="email"
                 placeholder="Nhập email của bạn"
                 {...formik.getFieldProps("email")}
-                className={`w-full pl-10 pr-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400
+                className={`w-full pl-10 pr-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400
                   ${
                     formik.touched.email && formik.errors.email
                       ? "border-red-500"
@@ -84,7 +87,7 @@ export function ForgotPasswordForm() {
           <button
             type="submit"
             disabled={formik.isSubmitting}
-            className="w-full py-2 rounded-lg bg-orange-500 text-white font-medium hover:bg-orange-600 transition disabled:opacity-50"
+            className="w-full py-2 rounded-lg bg-yellow-500 text-white font-medium hover:bg-yellow-600 transition disabled:opacity-50"
           >
             {formik.isSubmitting ? "Đang gửi..." : "Gửi mật khẩu tạm"}
           </button>
@@ -94,7 +97,7 @@ export function ForgotPasswordForm() {
         <div className="mt-4 text-center">
           <Link
             to="/auth/login"
-            className="text-sm text-gray-600 hover:text-orange-500 transition"
+            className="text-sm text-gray-600 hover:text-yellow-500 transition"
           >
             ← Quay lại đăng nhập
           </Link>
@@ -102,7 +105,9 @@ export function ForgotPasswordForm() {
 
         {/* Support Box */}
         <div className="mt-8 p-4 rounded-xl border bg-gray-50 text-sm text-gray-700 space-y-2">
-          <div className="font-medium text-gray-800">Không nhận được email?</div>
+          <div className="font-medium text-gray-800">
+            Không nhận được email?
+          </div>
           <ul className="list-disc pl-5 space-y-1">
             <li>Kiểm tra thư mục spam hoặc thư rác</li>
             <li>Đảm bảo email đã được nhập chính xác</li>
@@ -112,7 +117,7 @@ export function ForgotPasswordForm() {
 
         <p className="mt-6 text-xs text-gray-500 text-center">
           Cần hỗ trợ?{" "}
-          <a href="/support" className="text-orange-500 hover:underline">
+          <a href="/support" className="text-yellow-500 hover:underline">
             Liên hệ với chúng tôi
           </a>
         </p>
