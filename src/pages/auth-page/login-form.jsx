@@ -89,7 +89,7 @@ export function LoginForm() {
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
         <h2 className="text-2xl font-semibold text-center mb-1">Đăng nhập</h2>
         <p className="text-center text-gray-600 mb-8">
-          Chào mừng bạn trở lại với <span className="font-medium">YummyGo</span>
+          Chào mừng bạn trở lại với <span className="font-medium">MyMapFood</span>
         </p>
 
         <form onSubmit={formik.handleSubmit} className="space-y-6">
