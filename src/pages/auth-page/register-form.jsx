@@ -128,7 +128,7 @@ export function RegisterForm() {
       {/* Logo */}
       <Link to="/" className="flex flex-col items-center mb-6">
         <div className="w-16 h-16 rounded-full bg-orange-500 flex items-center justify-center text-white text-2xl font-bold">Y</div>
-        <div className="mt-2 text-2xl font-bold text-gray-900">Yummy<span className="text-orange-500">Go</span></div>
+        <div className="mt-2 text-2xl font-bold text-gray-900">MyMap<span className="text-orange-500">Food</span></div>
       </Link>
 
       {/* Step 1: Register */}

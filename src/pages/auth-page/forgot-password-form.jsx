@@ -38,7 +38,7 @@ export function ForgotPasswordForm() {
           Y
         </div>
         <div className="mt-2 text-2xl font-bold text-gray-900">
-          Yummy<span className="text-orange-500">Go</span>
+          MyMap<span className="text-orange-500">Food</span>
         </div>
       </Link>
 
