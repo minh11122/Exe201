@@ -92,7 +92,7 @@ export const FooterHome = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-yellow-500" />
-                <span className="text-[#555]">1900 1234</span>
+                <span className="text-[#555]">0983493222</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-yellow-500" />
@@ -101,7 +101,7 @@ export const FooterHome = () => {
               <li className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 text-yellow-500 mt-0.5" />
                 <span className="text-[#555]">
-                  123 Nguyễn Huệ, Quận 1, TP.HCM
+                  Đại học FPT Hà Nội
                 </span>
               </li>
             </ul>
