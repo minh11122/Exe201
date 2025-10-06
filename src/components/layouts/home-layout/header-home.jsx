@@ -14,13 +14,14 @@ import logo from "../../../assets/z7061145888588_5c8d81483fa297d0582373ac66f727a
 export const HeaderHome = () => {
   const [openSearch, setOpenSearch] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
-  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  const isLoggedIn = !!localStorage.getItem("token");
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("token"); // ❌ xoá token
     setShowUserMenu(false);
-    navigate("/");
+    navigate("/"); // quay về trang chủ
+    window.location.reload(); // ✅ reload để cập nhật header ngay lập tức
   };
 
   const handleLoginClick = () => {
@@ -99,7 +100,9 @@ export const HeaderHome = () => {
                     <div className="font-medium text-gray-900">
                       Nhà hàng yêu thích
                     </div>
-                    <div className="text-xs text-gray-500">Danh sách yêu thích</div>
+                    <div className="text-xs text-gray-500">
+                      Danh sách yêu thích
+                    </div>
                   </div>
                 </Link>
 
